@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcpanel-addon-accounts"
+version = "1.1.0"
+description = "User accounts, roles and permissions for MCPanel (an MCPanel-CLI addon)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "DippyCoder", email = "planewriter255@gmail.com" }]
+keywords = ["minecraft", "mcpanel", "accounts", "addon"]
+
+[project.urls]
+Source = "https://github.com/DippyCoder/MCPanel-Accounts"
+
+# How MCPanel-CLI discovers pip-installed addons: the entry-point name is the
+# addon name (`mcpanel addons enable|disable accounts`).
+[project.entry-points."mcpanel.addons"]
+accounts = "mcpanel_accounts"
+
+# The source folder is `accounts/` so `mcpanel addons install <this repo>`
+# installs it under the right name; as a pip package it's importable as
+# `mcpanel_accounts` instead, to keep a generic name out of site-packages.
+[tool.setuptools]
+packages = ["mcpanel_accounts"]
+package-dir = { "mcpanel_accounts" = "accounts" }
