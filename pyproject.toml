@@ -9,11 +9,11 @@ description = "User accounts, roles and permissions for MCPanel (an MCPanel-CLI 
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "GPL-3.0-or-later" }
-authors = [{ name = "DippyCoder", email = "planewriter255@gmail.com" }]
+authors = [{ name = "DippyCoder", email = "dippycoder@gmail.com" }]
 keywords = ["minecraft", "mcpanel", "accounts", "addon"]
 
 [project.urls]
-Source = "https://github.com/DippyCoder/MCPanel-Accounts"
+Source = "https://github.com/MCPanel-Studios/MCPanel-Accounts"
 
 # How MCPanel-CLI discovers pip-installed addons: the entry-point name is the
 # addon name (`mcpanel addons enable|disable accounts`).
